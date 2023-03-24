@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Temperature Converter Celcius to Farenheit</title>
+
 </head>
 
 <body>
-    <p>Hallo Werlt!</p>
-    test
+    <h1>Convert Temperature</h1>
+    <p>Enter the value in Celcius below to be converted to Farenheit:</p>
+    <script>
+        function toFarenheit() {
+            cVal = parseFloat(document.getElementById("cInput").value);
+            document.getElementById("fValueDisplay").innerHTML = (cVal * 1.8) + 32;
+        }
+    </script>
+    <p2>
+        <label>Celcius</label>
+        <input id="cInput" type="text" placeholder="0">
+
+        <button type="button" onclick="toFarenheit()"> Convert</button> <br>
+        Converted Value in Farenheit: <span id="fValueDisplay"></span>
+    </p2>
+
+
 </body>
 
 </html>
